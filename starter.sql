@@ -1,0 +1,50 @@
+-- 
+-- SELECT * from order_details
+-- Question 1.
+-- SELECT product_id, product_name, category_id FROM Products WHERE unit_price > 50
+-- Question 2.
+-- SELECT * FROM Customers WHERE country='Germany'
+-- Question 3.
+-- SELECT * FROM Orders WHERE customer_id = 'VINET'
+-- Question 4.
+-- SELECT o.customer_id, SUM(od.unit_price * od.quantity) AS total_cost
+-- FROM Orders o
+-- JOIN order_details od ON o.order_id = od.order_id
+-- GROUP BY o.customer_id;
+--  customer_id, 
+-- Question 5.
+-- SELECT * FROM products ORDER BY unit_price DESC LIMIT 5;
+-- Question 6.
+-- SELECT * FROM Employees  WHERE DATE(birth_date) < '1960-01-01';
+-- Question 7.
+-- SELECT * FROM products WHERE units_in_stock = 0
+-- Question 8.
+-- SELECT AVG(unit_price) FROM products
+-- Question 9.
+-- SELECT SUM(unit_price * quantity) FROM order_details WHERE product_id = 7 
+-- Question 10.
+-- SELECT COUNT(DISTINCT category_id) AS count_categorys FROM Products;
+-- Question 11.
+-- SELECT product_name AS discontinued_products FROM products WHERE discontinued = 1
+-- Question 12.
+-- SELECT COUNT(order_id) FROM Orders WHERE EXTRACT(YEAR FROM order_date)= 1997
+-- Question 13.
+-- SELECT * FROM Customers WHERE contact_title IN ('Owner', 'CEO')
+-- Question 14.
+-- SELECT MAX(unit_price) FROM products
+-- Question 15
+-- SELECT AVG(AGE(birth_date))  FROM Employees
+-- Question 16.
+-- SELECT * FROM Customers WHERE phone LIKE '%123%'
+-- Question 17.
+-- SELECT * FROM products WHERE units_in_stock < 10 AND discontinued = 0
+-- Question 18.
+-- SELECT MIN(unit_price) AS LowestPrice , MAX(unit_price) AS HighestPrice FROM products
+-- Question 19.
+-- SELECT * FROM Orders WHERE DATE (order_date) = '1997-05-05'
+-- Question 20.
+-- SELECT product_name, quantity_per_unit FROM products
+-- Question 21
+-- SELECT product_id, product_name, unit_price FROM products WHERE unit_price > (SELECT AVG(unit_price) FROM products)
+-- Question 22.
+-- SELECT COUNT(employee_id), city FROM Employees GROUP BY city;
